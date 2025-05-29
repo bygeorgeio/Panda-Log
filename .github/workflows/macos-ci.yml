@@ -1,0 +1,11 @@
+name: macOS CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build with Xcode
+        run: xcodebuild -scheme "Panda Log" -sdk macosx
