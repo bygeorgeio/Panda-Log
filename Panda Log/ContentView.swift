@@ -4,7 +4,14 @@
 //
 //  Created by George Mihailovski on 29/5/2025.
 //
+
 import SwiftUI
+import Foundation
+
+// MARK: - Notification Extension
+extension Notification.Name {
+    static let openLogFile = Notification.Name("OpenLogFile")
+}
 
 // MARK: - Model
 
@@ -144,6 +151,9 @@ struct ContentView: View {
                 }
             }
         ))
+        .onReceive(NotificationCenter.default.publisher(for: .openLogFile)) { _ in
+            openTab()
+        }
     }
 
     func openTab() {

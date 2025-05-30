@@ -4,24 +4,32 @@
 //
 //  Created by George Mihailovski on 29/5/2025.
 //
+
 import SwiftUI
 
 @main
 struct Panda_LogApp: App {
-    @State private var showAbout = false  // Step 1: State for the About window
-    
+    @State private var showAbout = false
+
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .sheet(isPresented: $showAbout) {   // Step 2: Show AboutView as a sheet
+                .sheet(isPresented: $showAbout) {
                     AboutView()
                 }
         }
         .commands {
-            CommandGroup(replacing: .appInfo) {    // Step 3: Custom About menu item
+            CommandGroup(replacing: .appInfo) {
                 Button("About Panda Log") {
                     showAbout = true
                 }
+            }
+            CommandGroup(after: .newItem) {
+                Divider()
+                Button("Open…") {
+                    NotificationCenter.default.post(name: .openLogFile, object: nil)
+                }
+                .keyboardShortcut("o", modifiers: .command)
             }
         }
     }
