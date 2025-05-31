@@ -37,7 +37,7 @@ There are two ways to get Panda Log on your Mac:
 git clone https://github.com/bygeorgeio/Panda-Log.git
 cd Panda-Log
 open "Panda Log.xcodeproj"
-
+```
 
 ---
 
