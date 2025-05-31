@@ -38,3 +38,42 @@ git clone https://github.com/bygeorgeio/Panda-Log.git
 cd Panda-Log
 open "Panda Log.xcodeproj"
 
+
+---
+
+### Gatekeeper & “Unidentified Developer” Warning
+
+Because Panda Log is not signed with a paid Developer ID, macOS Gatekeeper will show a warning the first time you open it:
+
+1. **Right-click** (or Control-click) `Panda Log.app` in Finder.
+2. Select **Open** from the menu.
+3. In the dialog, click **Open** again.
+4. From then on, you can open the app normally.
+
+Alternatively, to remove the quarantine attribute in Terminal:
+```sh
+sudo xattr -r -d com.apple.quarantine /Applications/Panda\ Log.app
+
+
+### Usage
+
+- **Open log files:** Use the “+” button or `Cmd+O`.
+- **Search:** Press `Cmd+F` or use the search field.
+- **Follow Tail:** Toggle to always see the newest log lines.
+- **Keyboard Shortcuts:**
+    - `Cmd+W` Close tab
+    - `Cmd+L` Clear search
+
+---
+
+### Contributing
+
+Pull requests and issues welcome!  
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+### License
+
+MIT License
+
