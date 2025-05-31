@@ -52,8 +52,7 @@ Because Panda Log is not signed with a paid Developer ID, macOS Gatekeeper will 
 
 Alternatively, to remove the quarantine attribute in Terminal:
 ```sh
-sudo xattr -r -d com.apple.quarantine /Applications/Panda\ Log.app
-
+sudo xattr -r -d com.apple.quarantine /Applications/Panda\ Log.app```
 
 ### Usage
 
