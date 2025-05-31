@@ -30,6 +30,7 @@ There are two ways to get Panda Log on your Mac:
     This will produce `Panda Log.app`. Move it into your `/Applications` folder (or anywhere you prefer).
 
 ---
+<<<<<<< HEAD
 
 ### 2. Build from Source
 
@@ -41,9 +42,12 @@ Build and run in Xcode.
 To create your own distributable .app, use Product ▶ Archive in Xcode, then export.
 
 Gatekeeper & “Unidentified Developer” Warning
+=======
+>>>>>>> e44d0c9 (Modify Readme)
 
-Because Panda Log is not signed with a paid Developer ID, macOS Gatekeeper will show a warning the first time you open it:
+### 2. Build from Source
 
+<<<<<<< HEAD
 Right-click (or Control-click) Panda Log.app in Finder.
 Select Open from the menu.
 In the dialog, click Open again.
@@ -71,6 +75,12 @@ License
 MIT License
 
 Credits
+=======
+```sh
+git clone https://github.com/bygeorgeio/Panda-Log.git
+cd Panda-Log
+open "Panda Log.xcodeproj"
+>>>>>>> e44d0c9 (Modify Readme)
 
 Inspired by CMTrace
 Designed and developed by George Mihailovski
